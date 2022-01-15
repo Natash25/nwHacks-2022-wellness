@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 // import { withRouter } from 'react-router';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
@@ -20,25 +21,29 @@ class SignUpFormBase extends Component {
         this.state = { ...INITIAL_STATE }; // resets the state after a successful sign up
     }
 
-    onSubmit = async (event) => {
+    onSubmit = (event) => {
         const {
             username,
             email,
             passwordOne
         } = this.state;
-        let result = {};
 
-        try {
-            result = await this.props.firebase.createUserWithEmailPass(email, passwordOne);
-                
-            console.log(this.state);
-            this.setState({ ...INITIAL_STATE }); // empty the input fields as reset
-            this.props.history.push(ROUTES.HOME); // re-direct to home, via withRouter
-        
-            event.preventDefault();
-        } catch (error) {
-            this.setState({ error });
-        }
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, passwordOne)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                this.setState({ ...INITIAL_STATE }); // empty the input fields as reset
+                this.props.history.push(ROUTES.HOME); // re-direct to home, via withRouter
+                // ...
+            })
+            .catch((error) => {
+                this.setState({ error: error });
+                // ..
+            });
+
+        event.preventDefault();
+
     };
 
     onChange = (event) => {

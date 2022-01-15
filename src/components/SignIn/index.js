@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
@@ -30,20 +31,24 @@ class SignInFormBase extends Component {
     const {
         username,
         email,
-        passwordOne
+        password
     } = this.state;
-    let result = {};
 
-    try {
-        result = await this.props.firebase.signInWithEmailPass(email, passwordOne);
-            
-        this.setState({ ...INITIAL_STATE }); // empty the input fields as reset
-        this.props.history.push(ROUTES.HOME); // re-direct to home, via withRouter
-    
-        event.preventDefault();
-    } catch (error) {
-        this.setState({ error });
-    }
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          this.setState({ ...INITIAL_STATE }); // empty the input fields as reset
+          this.props.history.push(ROUTES.HOME); // re-direct to home, via withRouter
+          // ...
+      })
+      .catch((error) => {
+          this.setState({ error: error });
+          // ..
+      });
+
+      event.preventDefault();
 };
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
