@@ -38,13 +38,13 @@ class Firebase {
 
     // Auth API: interface for React components that will connect to Firebase API - to be consumed
     // todo: async and needs error handling
-    createUserWithEmailPass = async (email, password) => {
-        await this.auth.createUserWithEmailAndPassword(email, password);
+    createUserWithEmailPass = (email, password) => {
+        this.auth.createUserWithEmailAndPassword(email, password);
     };
 
     // todo: async and needs error handling
-    signInWithEmailPass = async (email, password) => {
-        await this.auth.signInWithEmailAndPassword(email, password);
+    signInWithEmailPass = (email, password) => {
+        this.auth.signInWithEmailAndPassword(email, password);
     }
 
     signOut = () => {
