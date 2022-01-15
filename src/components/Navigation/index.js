@@ -19,6 +19,9 @@ const Navigation = () => (
       <li>
         <Link to={ROUTES.ADMIN}>Admin</Link>
       </li>
+      <li>
+        <Link to={ROUTES.APPOINTMENTS}>Appointments</Link>
+      </li>
     </ul>
   </div>
 );
