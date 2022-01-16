@@ -23,7 +23,7 @@ function Times() {
         trigger={<Button>View Available Times</Button>}
       >
           
-        <Modal.Header> Avaialable Times </Modal.Header>
+        <Modal.Header> Available Times </Modal.Header>
 
         <Modal.Content image>
           <Modal.Description>
@@ -35,14 +35,6 @@ function Times() {
           <Button color="black" onClick={() => setOpen(false)}>
             Cancel
           </Button>
-          <Modal
-          tigger={<Button
-            content="Test"
-
-            labelPosition="right"
-            icon="checkmark"
-            positive>Test</Button>}></Modal>
-                  <Modal.Header>  Times </Modal.Header>
 
           <Button
             content="Select Time"
