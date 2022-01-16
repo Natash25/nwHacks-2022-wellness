@@ -1,23 +1,8 @@
 import React, { Component } from 'react'
 import { Form, Radio } from 'semantic-ui-react'
-import { db } from "./firebase-config";
-import {
-  collection,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore";
 
-function test(test){
-  console.log(test);
-  const updateTime = async (test, id) => {
-    const userDoc = doc(db, "users", id);
-    const newFields = { test };
-    await updateDoc(userDoc, newFields);
-  };
-}
+
+
 
 export default class RadioTest extends Component {
   value = "";
