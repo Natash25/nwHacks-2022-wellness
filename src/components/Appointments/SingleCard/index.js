@@ -1,7 +1,7 @@
 import React from "react";
-import Component from "react";
 import PropTypes from "prop-types";
 import { Button, Card, Image, Item } from "semantic-ui-react";
+import * as ROUTES from '../../../constants/routes';
 
 function SingleCard({
   photo,
@@ -10,7 +10,6 @@ function SingleCard({
   date,
   startTime,
   endTime,
-  callLink,
 }) {
   return (
     <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
@@ -28,9 +27,8 @@ function SingleCard({
             <Button
               basic
               color="green"
-              //   class="JoinCall"
               role="link"
-              href={callLink}
+              href={ROUTES.VIDEO_LINK_DEFAULT}
             >
               Join Call
             </Button>
@@ -62,7 +60,6 @@ SingleCard.defaultProps = {
   date: "Month Day",
   startTime: "12:00",
   endTime: "11:59",
-  callLink: "wwww.google.com",
 };
 
 export default SingleCard;

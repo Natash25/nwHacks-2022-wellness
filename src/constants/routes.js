@@ -10,3 +10,4 @@ export const COVID_NEWS = '/covid-news';
 export const CATALOGUE = '/catalogue';
 export const INDIVIDUAL = '/individual';
 export const RADIO = '/radio';
+export const VIDEO_LINK_DEFAULT = '/call';

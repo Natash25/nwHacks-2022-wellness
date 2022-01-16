@@ -12,6 +12,7 @@ import Appointments from '../Appointments';
 import Catalogue from '../Catalogue';
 import Individual from '../Individual';
 import RadioTest from '../Radio';
+import VideoApp from '../../twilio-video-react-hooks/src/App';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path={ROUTES.CATALOGUE} component={Catalogue} />
             <Route path={ROUTES.INDIVIDUAL} component={Individual} />
             <Route path={ROUTES.RADIO} component={RadioTest} />
+            <Route path={ROUTES.VIDEO_LINK_DEFAULT} component={VideoApp} />
         </div>
   </Router>
 );
