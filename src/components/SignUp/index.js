@@ -6,6 +6,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import {Image} from "semantic-ui-react";
 
 const INITIAL_STATE = {
     username: '',
@@ -33,7 +34,7 @@ class SignUpFormBase extends Component {
         const db = getFirestore();
         createUserWithEmailAndPassword(auth, email, passwordOne)
             .then((userCredential) => {
-                // Signed in 
+                // Signed in
                 const user = userCredential.user;
                 setDoc(doc(db, "users", user.uid), {
                     name: username,
@@ -68,20 +69,26 @@ class SignUpFormBase extends Component {
         const isInvalid = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
+            <div >
+              <form onSubmit={this.onSubmit} onSubmit={this.onSubmit} style={{display: 'flex', flexDirection: 'column',
+                alignItems: 'center', justifyContent: 'center' }}>
                 <input
                     name="username"
                     value={username}
                     onChange={this.onChange}
                     type="text"
                     placeholder="Full Name"
-                    />
+                    style={{width: '25vw', height: '50px', margin: '10px', borderRadius: '5px', border: '1px solid #ccc',
+                      padding: '25px'}}
+                />
                 <input
                     name="email"
                     value={email}
                     onChange={this.onChange}
                     type="text"
                     placeholder="Email Address"
+                    style={{width: '25vw', height: '50px', margin: '10px', borderRadius: '5px', border: '1px solid #ccc',
+                      padding: '25px'}}
                 />
                 <input
                     name="passwordOne"
@@ -89,6 +96,8 @@ class SignUpFormBase extends Component {
                     onChange={this.onChange}
                     type="password"
                     placeholder="Password"
+                    style={{width: '25vw', height: '50px', margin: '10px', borderRadius: '5px', border: '1px solid #ccc',
+                      padding: '25px'}}
                 />
                 <input
                     name="passwordTwo"
@@ -96,28 +105,40 @@ class SignUpFormBase extends Component {
                     onChange={this.onChange}
                     type="password"
                     placeholder="Confirm Password"
+                    style={{width: '25vw', height: '50px', margin: '10px', borderRadius: '5px', border: '1px solid #ccc',
+                      padding: '25px'}}
                 />
-                <button disabled={isInvalid} type="submit">Sign Up</button>
+                <button
+                    disabled={isInvalid}
+                    type="submit"
+                    style={{width: '10vw', margin: '10px', borderRadius: '5px', border: '2px solid black',
+                      padding: '15px'}}
+                >
+                  Sign Up
+                </button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <p style={{color: 'red', margin: '10px'}}>The email address is badly formatted.</p>}
+              </form>
+            </div>
         );
     }
 }
 
 const SignUpPage = () => (
-    <div>
-      <h1>SignUp</h1>
+    <div style={{display: 'flex', flexDirection: 'column', height: '95vh', alignItems: 'center', justifyContent:
+          'center' }}>
+      <Image src="/img/logo.png" style={{width: '18vw'}}/>
+      <h1 style={{fontSize: '5em'}}>SignUp</h1>
       <SignUpForm />
     </div>
   );
-  
+
 const SignUpLink = () => (
     <p>
         Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign up here</Link>
     </p>
 );
-  
+
 const SignUpForm = withRouter(withFirebase(SignUpFormBase));
 
 export default SignUpPage;

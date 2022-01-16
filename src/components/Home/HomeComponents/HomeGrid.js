@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Grid, Button } from 'semantic-ui-react'
 import Tip from "./Tip";
 import "../index.css"
+import * as ROUTES from "../../../constants/routes";
 
 export default function HomeGrid() {
   return (
@@ -45,7 +46,10 @@ export default function HomeGrid() {
                 height: '100%', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end',
                 backgroundPosition: "center", backgroundRepeat: 'no-repeat'
               }}>
-                <Button primary style={{height: '55px', width: '200px', margin: '30px'}}>COVID-19</Button>
+                <Button primary style={{height: '55px', width: '200px', margin: '30px', padding: '20px'}}
+                        href={ROUTES.COVID_NEWS}>
+                  COVID-19
+                </Button>
               </div>
             </Grid.Column>
           </Grid.Row>
