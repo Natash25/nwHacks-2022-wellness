@@ -37,8 +37,8 @@ class CardGroup extends Component {
           name="Joy Wong"
           title="Registered Dietitian"
           date="January 17"
-          startTime="2:00pm"
-          endTime="3:00pm"
+          startTime="12:00pm"
+          endTime="1:00pm"
         />
         <SingleCard
           photo="https://semantic-ui.com/images/avatar2/small/lena.png"
