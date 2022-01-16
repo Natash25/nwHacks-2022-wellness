@@ -10,20 +10,12 @@ const Navigation = () => (
           href={ROUTES.SIGN_IN}
       />
       <Menu.Item
-          name='Landing'
-          href={ROUTES.LANDING}
-      />
-      <Menu.Item
           name='Home'
           href={ROUTES.HOME}
       />
       <Menu.Item
           name='Account'
           href={ROUTES.ACCOUNT}
-      />
-      <Menu.Item
-          name='Admin'
-          href={ROUTES.ADMIN}
       />
       <Menu.Item
           name='Appointments'
