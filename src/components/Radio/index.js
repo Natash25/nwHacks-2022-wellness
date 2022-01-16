@@ -36,10 +36,10 @@ export default class RadioTest extends Component {
         </Form.Field>
         <Form.Field>
           <Radio
-            label='January 15th 12:00am PST'
+            label='January 15th 12:00pm'
             name='radioGroup'
-            value='January 15th 12:00am PST'
-            checked={this.state.value === 'January 15th 12:00am PST'}
+            value='January 15th 12:00pm'
+            checked={this.state.value === 'January 15th 12:00pm'}
             // checked={console.long("sdfsdf")}
             onChange={this.handleChange}
             
@@ -47,28 +47,28 @@ export default class RadioTest extends Component {
         </Form.Field>
         <Form.Field>
           <Radio
-            label='January 16th 12:00am PST'
+            label='January 16th 12:00pm'
             name='radioGroup'
-            value='January 16th 12:00am PST'
-            checked={this.state.value === 'January 16th 12:00am PST'}
+            value='January 16th 12:00pm'
+            checked={this.state.value === 'January 16th 12:00pm'}
             onChange={this.handleChange}
           />
         </Form.Field>
         <Form.Field>
           <Radio
-            label='January 17th 12:00am PST'
+            label='January 17th 12:00pm PST'
             name='radioGroup'
-            value='January 17th 12:00am PST'
-            checked={this.state.value === 'January 17th 12:00am PST'}
+            value='January 17th 12:00pm PST'
+            checked={this.state.value === 'January 17th 12:00pm PST'}
             onChange={this.handleChange}
           />
         </Form.Field>
         <Form.Field>
           <Radio
-            label='January 18th 12:00am PST'
+            label='January 18th 12:00pm'
             name='radioGroup'
-            value='January 18th 12:00am PST'
-            checked={this.state.value === 'January 18th 12:00am PST'}
+            value='January 18th 12:00pm'
+            checked={this.state.value === 'January 18th 12:00pm'}
             onChange={this.handleChange}
           />
         </Form.Field>
