@@ -27,15 +27,15 @@ class CardGroup extends Component {
         <SingleCard
           photo="https://semantic-ui.com/images/avatar2/small/mark.png"
           name="Fred Benedict"
-          title="Dietitian"
+          title="Registered Dietitian"
           date="January 14"
           startTime="12:00pm"
           endTime="1:00pm"
         />
         <SingleCard
-          photo="https://semantic-ui.com/images/avatar2/small/patrick.png"
-          name="John Smith"
-          title="Physiotherapist"
+          photo="https://semantic-ui.com/images/avatar/small/stevie.jpg"
+          name="Joy Wong"
+          title="Registered Dietitian"
           date="January 17"
           startTime="2:00pm"
           endTime="3:00pm"
@@ -51,7 +51,7 @@ class CardGroup extends Component {
         <SingleCard
           photo="https://semantic-ui.com/images/avatar2/small/molly.png"
           name="Jenny Jane"
-          title="Dietitian"
+          title="Registered Dietitian"
           date="January 28"
           startTime="9:00am"
           endTime="10:00am"
@@ -59,7 +59,7 @@ class CardGroup extends Component {
         <SingleCard
           photo="https://semantic-ui.com/images/avatar2/small/matthew.png"
           name="Max Mark"
-          title="Dietitian"
+          title="Registered Dietitian"
           date="January 29"
           startTime="12:00pm"
           endTime="1:00pm"
