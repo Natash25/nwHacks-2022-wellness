@@ -56,10 +56,10 @@ export default class RadioTest extends Component {
         </Form.Field>
         <Form.Field>
           <Radio
-            label='January 17th 12:00pm PST'
+            label='January 17th 12:00pm'
             name='radioGroup'
-            value='January 17th 12:00pm PST'
-            checked={this.state.value === 'January 17th 12:00pm PST'}
+            value='January 17th 12:00pm'
+            checked={this.state.value === 'January 17th 12:00pm'}
             onChange={this.handleChange}
           />
         </Form.Field>

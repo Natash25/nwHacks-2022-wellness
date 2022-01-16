@@ -14,7 +14,7 @@ function Times() {
       <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"
 }}>
           <Image size="massive" src="https://react.semantic-ui.com/images/avatar/large/stevie.jpg" wrapped ui={false}/>
-          <h1>Registered Dietitian </h1> 
+          <h1>Joy Wong: Registered Dietitian </h1> 
           <h2>Weight Management Specialist</h2>
           <Modal
         onClose={() => setOpen(false)}
