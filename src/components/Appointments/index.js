@@ -28,35 +28,15 @@ class AppointmentsBase extends Component {
     render() {
       return(         
       <div>
-      <h1>Appointments</h1>
-      hellloooo this is a test
-      <Container>
+      <h1 style={{paddingBottom: "20px", paddingLeft: "20px"}}>Appointments</h1>
+      <div style={{alignItems:"center", justify:"center"}}>
+      <Container fluid>
         <CardGroup/>
     </Container>
+    </div>
     </div>);
     }
 }
-
-// function Appointments(prop) {
-//     return(
-//         <div>
-//         <h1>Appointments</h1>
-  
-//         <Container>
-//           <CardGroup/>
-//       </Container>
-//       </div>
-//     )
-// }
-
-// ReactDOM.render(
-//     element,
-//     document.getElementById('root')
-//   );
-
-// const Appointments = () => (
-
-//   );
   
 const Appointments = withRouter(AppointmentsBase);
 
