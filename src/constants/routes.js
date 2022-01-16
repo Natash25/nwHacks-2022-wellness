@@ -6,3 +6,6 @@ export const ACCOUNT = '/account';
 export const APPOINTMENTS = '/appointments';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+export const CATALOGUE = '/catalogue';
+export const INDIVIDUAL = '/individual';
+export const RADIO = '/radio';
