@@ -21,6 +21,10 @@ const Navigation = () => (
           name='Appointments'
           href={ROUTES.APPOINTMENTS}
       />
+        <Menu.Item
+          name='Catalogue'
+          href={ROUTES.CATALOGUE}
+      />
       </Menu>
   // <div>
   //   <ul>
