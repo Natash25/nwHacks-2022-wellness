@@ -9,6 +9,9 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import Appointments from '../Appointments';
+import Catalogue from '../Catalogue';
+import Individual from '../Individual';
+import RadioTest from '../Radio';
 
 import * as ROUTES from '../../constants/routes';
 
@@ -24,6 +27,9 @@ const App = () => (
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.APPOINTMENTS} component={Appointments} />
+            <Route path={ROUTES.CATALOGUE} component={Catalogue} />
+            <Route path={ROUTES.INDIVIDUAL} component={Individual} />
+            <Route path={ROUTES.RADIO} component={RadioTest} />
         </div>
   </Router>
 );
