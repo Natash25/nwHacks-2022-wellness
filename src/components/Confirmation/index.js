@@ -1,12 +1,10 @@
-
 import { useState, useEffect } from "react";
 import React from "react";
 import { Form, Card, CardDescription, Button, Header, Image, Modal } from "semantic-ui-react";
 import RadioTest from "../Radio";
 import { render } from "@testing-library/react";
-import Confirm from "../Confirmation";
 
-function Times() {
+function Confirm() {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -35,18 +33,9 @@ function Times() {
           <Button color="black" onClick={() => setOpen(false)}>
             Cancel
           </Button>
-          <Modal
-          tigger={<Button
-            content="Test"
-
-            labelPosition="right"
-            icon="checkmark"
-            positive>Test</Button>}></Modal>
-                  <Modal.Header>  Times </Modal.Header>
-
           <Button
             content="Select Time"
-            onClick={<Confirm />}
+            onClick={console.log("erse")}
             onClick={() => setOpen(false)}
             labelPosition="right"
             icon="checkmark"
@@ -59,4 +48,4 @@ function Times() {
 
   );
 }
-export default Times;
+export default Confirm;

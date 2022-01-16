@@ -4,7 +4,7 @@ import { Button, Card, CardDescription, Image } from "semantic-ui-react";
 
 const Catalogue = () => (
   <div>
-    <h1>Dieticians</h1> <Dietician />
+    <h1>Dietitians</h1> <Dietitian />
     <h1>Personal Trainers</h1> <Trainers />
     <h1>Physio Therapists</h1>
     <PhysioTherapists />
@@ -12,7 +12,7 @@ const Catalogue = () => (
   </div>
 );
 
-const Dietician = () => (
+const Dietitian = () => (
   <Card.Group>
     <Card>
       <Card size="large">
@@ -21,7 +21,7 @@ const Dietician = () => (
           src="https://react.semantic-ui.com/images/avatar/large/stevie.jpg"
         />
         <Card.Header>Joy Wong</Card.Header>
-        <Card.Meta>Registered Dietician </Card.Meta>
+        <Card.Meta>Registered Dietitian </Card.Meta>
         <CardDescription>Weight Management Specialist</CardDescription>
       </Card>
       <Card extra>
@@ -57,7 +57,7 @@ const Dietician = () => (
           src="https://react.semantic-ui.com/images/avatar/large/jenny.jpg"
         />
         <Card.Header>Jenny Lawrence</Card.Header>
-        <Card.Meta>Registered Dietician</Card.Meta>
+        <Card.Meta>Registered Dietitian</Card.Meta>
         <CardDescription>Sports Nutritionist</CardDescription>
       </Card>
       <Card extra>
